@@ -25,5 +25,13 @@ public class BancoServiceServer extends UnicastRemoteObject implements BancoServ
     public int quantidadeContas() throws RemoteException {
         return saldoContas.size();
     }
+    
+    @Override //método adicionado
+    public boolean adicionarConta(Conta novaConta){
+        for(int i = 0 ; i < listaContas.size(); i++){
+            listaContas.add(listaContas.get(i));
+        }
 
+        return true;
+    }
 }

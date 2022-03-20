@@ -32,6 +32,15 @@ public class AppClienteBanco {
                     //chamada ao método remoto, como se fosse executar localmente
                     System.out.println(banco.quantidadeContas());
                 }
+                case 3: {
+                    //chamada ao método remoto, como se fosse executar localmente
+                    System.out.println("Digita o número da Conta");
+                    String numeroConta = entrada.next();
+                    Conta conta = new Conta(numeroConta, 200.00);
+                    banco.adicionarConta(conta);
+                    System.out.println("Conta cadastrada!");
+
+                }
             }
             menu();
             opcao = entrada.nextInt();
@@ -39,9 +48,11 @@ public class AppClienteBanco {
     }
 
     public static void menu() {
+        System.out.println("\n=== AMANDA GABRIELLE SOARES DE ALMEIDA ===");
         System.out.println("\n=== BANCO RMI (ou FMI?!) ===");
         System.out.println("1 - Saldo da conta");
         System.out.println("2 - Quantidade de contas");
+        System.out.println("3 - Adicionar conta");
         System.out.println("9 - Sair");
     }
 
